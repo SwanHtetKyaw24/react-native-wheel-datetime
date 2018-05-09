@@ -72,9 +72,11 @@ export default class DatePicker extends PureComponent {
 
     const minYear = minimumDate.getFullYear();
     const maxYear = maximumDate.getFullYear();
+    
+    const monthArr = ["JAN", "FEB", "MAR", "APR", "MAY", "JUN", "JUL", "AUG", "SEP", "OCT", "NOV", "DEC",];
 
     for (let i = 1; i <= 12; i += 1) {
-      this.state.monthRange.push({ value: i, label: `${i}${labelUnit.month}` });
+      this.state.monthRange.push({ value: i, label: `${monthArr[i - 1]}${labelUnit.month}` });
     }
 
     this.state.yearRange.push({ value: minYear, label: `${minYear}${labelUnit.year}` });
